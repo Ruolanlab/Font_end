@@ -1,0 +1,23 @@
+{
+  "id": "3279670",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7954390",
+      "name": "错叉_块",
+      "font_class": "cuocha_kuai",
+      "unicode": "ed1e",
+      "unicode_decimal": 60702
+    },
+    {
+      "icon_id": "21049653",
+      "name": "圆圈",
+      "font_class": "yuanquan",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/iconfont/iconfont.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            margin: 0 auto;
+        }
+        
+        p {
+            width: 300px;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        /* 棋盘样式 */
+        
+        #box {
+            display: flex;
+            flex-wrap: wrap;
+            /* position: relative; */
+            margin: 20px auto;
+            width: 306px;
+            height: 306px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        
+        #box li {
+            /* position: absolute; */
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            border: 1px solid #eee;
+            background: #fff;
+        }
+        /* 棋盘重置 */
+        
+        button {
+            display: block;
+        }
+        
+        .red {
+            color: red;
+        }
+        /* 当前棋子 */
+        
+        #select {
+            display: flex;
+            margin-bottom: 20px;
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        
+        #select span {
+            border: 1px solid #eee;
+            flex: 1;
+        }
+        
+        .bgc {
+            background-color: #ccc;
+        }
+    </style>
+    <script src="./js/game.js"></script>
+</head>
+
+<body>
+    <!-- 思路：
+    1.先用ul包含9个li，创建棋盘
+    2.获取鼠标点击的li，添加点击事件
+    3.点击到的当前li分别添加两种棋子的类（由于这里使用了图标，因此添加类；直接用文字 o 和 x 时，使用 innerHTML 替换 li 中的文字即可）
+    4.判断其中某一方棋子位置分布是否存在满足获胜条件的情况，若满足，宣布此方获胜同时删除点击事件
+    5.重新开始棋局时，设置重置按钮，重置九宫格棋盘（删除类） -->
+
+    <p>说明：<br>1.点击九宫格下棋，o 方先下；<br>2.点击重置按钮可重置棋盘。</p>
+    <ul id="box">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div id="select">
+        <span class="iconfont icon-yuanquan"></span>
+        <span class="iconfont icon-cuocha_kuai red"></span>
+    </div>
+    <button>重置</button>
+</body>
+
+</html>
